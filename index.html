@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CHANGE THIS: the text shown in the browser tab -->
+  <title>My First Website</title>
+
+  <style>
+    /* ===== Colors and fonts (edit these to restyle the whole page) ===== */
+    :root {
+      --bg: #0f1115;
+      --card: #1a1d24;
+      --text: #e8e8ea;
+      --muted: #9aa0ac;
+      --accent: #6ad19b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #2a2e38;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    /* CHANGE THIS: the big heading. Your name fits well here. */
+    h1 {
+      font-size: 34px;
+      margin-bottom: 16px;
+    }
+
+    h1 .wave {
+      display: inline-block;
+      animation: wave 2s ease-in-out infinite;
+      transform-origin: 70% 70%;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    /* CHANGE THIS: the button link. Put your email or any URL in href. */
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f1115;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 26px;
+      border-radius: 10px;
+      transition: opacity 0.2s ease;
+    }
+
+    .button:hover { opacity: 0.85; }
+
+    footer {
+      margin-top: 32px;
+      font-size: 13px;
+      color: #5a606e;
+    }
+
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0deg); }
+      20% { transform: rotate(18deg); }
+      40% { transform: rotate(-8deg); }
+    }
+
+    /* Make it look good on phones too */
+    @media (max-width: 480px) {
+      .card { padding: 36px 24px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="badge">My first site</span>
+
+    <!-- CHANGE THIS: your name or a short title -->
+    <h1>Hi, I'm Miller <span class="wave">&#128075;</span></h1>
+
+    <!-- CHANGE THIS: one or two sentences about you -->
+    <p>This is my very first website, and it's now live on the internet. More to come soon.</p>
+
+    <!-- CHANGE THIS: where the button goes (email, social link, etc.) -->
+    <a class="button" href="mailto:you@example.com">Get in touch</a>
+
+    <footer>Built and deployed by me &middot; 2026</footer>
+  </main>
+</body>
+</html>
