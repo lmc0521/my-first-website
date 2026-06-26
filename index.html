@@ -18,6 +18,16 @@
       --accent: #d16a6a;
     }
 
+
+    /* Colors used when the page is in light mode */
+    body.light {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --border: #e2e5ea;
+      --text: #1a1d24;
+      --muted: #5a606e;
+      --accent: #1a9b5f;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -147,7 +157,7 @@
       <h1>Hi, I'm Miller Liu <span class="wave">&#128075;</span></h1>
       <!-- CHANGE THIS: your one-line intro -->
       <p>I'm learning to build websites, and this is where I practice.</p>
-      <a class="button" href="#links">See my links</a>
+      <a class="button" href="#links">See my links</a><button id="theme-toggle" class="button">Toggle theme</button>
     </div>
   </header>
 
@@ -186,4 +196,14 @@
   </footer>
 
 </body>
+<script>
+  // 1. SELECT the button by its id
+  const button = document.getElementById("theme-toggle");
+
+  // 2. LISTEN for a click on it
+  button.addEventListener("click", function () {
+    // 3. CHANGE: add or remove the "light" class on the body
+    document.body.classList.toggle("light");
+  });
+</script>
 </html>
